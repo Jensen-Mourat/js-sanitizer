@@ -1,0 +1,15 @@
+{
+  "name": "js-sanitizer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "repository": "https://github.com/Jensen-Mourat/js-sanitizer.git",
+  "author": "Jensen",
+  "license": "Apache 2.0",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
