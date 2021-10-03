@@ -21,20 +21,20 @@ undefined.
 Typescript:
 
 ```
-import { sanitizer } from 'js-sanitizer';
+import { sanitize } from 'js-sanitizer';
 
 const data = 'test';
-const myFn = sanitizer('(x) => x');
+const myFn = sanitize('(x) => x');
 console.log({ ran: myFn(data) });
 ```
 
 Javascript:
 
 ```
-const { sanitizer } = require('js-sanitizer');
+const { sanitize } = require('js-sanitizer');
 
 const data = 'test';
-const myFn = sanitizer('(x) => x');
+const myFn = sanitize('(x) => x');
 console.log({ ran: myFn(data) });
 ```
 
