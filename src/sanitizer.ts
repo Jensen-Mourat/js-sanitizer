@@ -10,7 +10,7 @@ interface SanitizerOptions {
 
 const banSet = new Set(BAN_LIST);
 const keywordSet = new Set<string>(KEYWORDS);
-export const sanitize = (fn: string, options?: SanitizerOptions) => {
+export const sanitizer = (fn: string, options?: SanitizerOptions) => {
     const throwError = (err: string) => {
         if (options.failSilently) {
             console.warn(err);

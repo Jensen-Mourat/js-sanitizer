@@ -7,7 +7,7 @@
   },
   "repository": "https://github.com/Jensen-Mourat/js-sanitizer.git",
   "author": "Jensen",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "private": false,
   "devDependencies": {
     "typescript": "^4.4.3"
