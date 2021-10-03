@@ -1,17 +1,17 @@
 # js-sanitizer
 
-Sanitize js code provided as string. This is a js sanitizer and not an Html sanitizer! Prevents any js code written as a
-string to access global variables (In Node , and window in browser).
+Sanitize JavaScript code provided as string. This is a JavaScript sanitizer and not an HTML sanitizer! Prevents any
+JavaScript code written as a string to access global variables (in Nodejs, and from `window` in browser).
 
 ## Motivation
 
 Using `eval()` or the newer `new Function()` is a known security risk and it is generally a bad idea to use them.
 
-However there are some use cases where one is forced to use them, i.e to run a function which is written as a string.
+However, there are some use cases where one is forced to use them.
 
 This library is written for the sole purpose of reducing the security risks associated with running a function from a
-string. This is done by trying to sanitize the string, in this case preventing access to any global/window variable
-inside the string. Under the hood this library forces the function in a scope where the global/window variables are
+string. This is done by trying to sanitize the string, in this case, preventing access to any global/ window variable
+inside the string. Under the hood this library forces the function in a scope where the global/ window variables are
 undefined.
 
 ⚠️ DISCLAIMER: ⚠️ I do not claim this library to be 100% safe (or even close), use at your own risk.
@@ -26,7 +26,7 @@ yarn add js-sanitizer
 
 ## Usage
 
-Typescript:
+TypeScript:
 
 ```
 import { sanitize } from 'js-sanitizer';
@@ -36,7 +36,7 @@ const myFn = sanitize('(x) => x');
 console.log({ ran: myFn(data) });
 ```
 
-Javascript:
+JavaScript:
 
 ```
 const { sanitize } = require('js-sanitizer');
