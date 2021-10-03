@@ -1,6 +1,6 @@
 # js-sanitizer
 
-Sanitize js code passed as string. It is a js sanitizer and not an Html sanitizer! Prevents any js code written as a
+Sanitize js code provided as string. This is a js sanitizer and not an Html sanitizer! Prevents any js code written as a
 string to access global variables (In Node , and window in browser).
 
 ## Motivation
@@ -10,8 +10,9 @@ Using `eval()` or the newer `new Function()` is a known security risk and it is 
 However there are some use cases where one is forced to use them, i.e to run a function which is written as a string.
 
 This library is written for the sole purpose of reducing the security risks associated with running a function from a
-string by trying to sanitize the string and preventing access to any global/window variable. Under the hood this library
-forces the function in a scope where the global/window variables are undefined.
+string. This is done by trying to sanitize the string, in this case preventing access to any global/window variable
+inside the string. Under the hood this library forces the function in a scope where the global/window variables are
+undefined.
 
 ⚠️ DISCLAIMER: ⚠️ I do not claim this library to be 100% safe (or even close), use at your own risk.
 
@@ -63,6 +64,7 @@ interface SanitizerOptions {
    preventString: string[]; 
    /*
       expand the current ban list to add other functions/classes which should not be accessible
+      it is generally a good idea to add all the global variables you defined here
    */
    expandBanList: string[]; 
    /*
