@@ -16,6 +16,14 @@ undefined.
 
 ⚠️ DISCLAIMER: ⚠️ I do not claim this library to be 100% safe (or even close), use at your own risk.
 
+## Installation
+
+```
+npm add js-sanitizer
+// or
+yarn add js-sanitizer
+```
+
 ## Usage
 
 Typescript:
