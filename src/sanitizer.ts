@@ -1,6 +1,7 @@
 import {BAN_LIST, KEYWORDS, KeywordType} from './ban-list';
 
 interface SanitizerOptions {
+    allow: string[];
     sanitizeWindowProperties: boolean;
     preventKeyWord: KeywordType[];
     preventString: string[];
@@ -51,7 +52,13 @@ export const sanitizer = (fn: string, options?: SanitizerOptions) => {
             throwError('window is undefined');
         }
     }
+    if (options?.allow) {
+        const allow = options.allow;
+        for (let i = 0; i < allow.length; i++) {
+            banSet.delete(allow[i]);
+        }
+    }
     const banList = Array.from(banSet);
-    const _fn = `return function(${banList.join(',')}){${fn}}`;
-    return new Function('', _fn).apply({}, banList);
+    const _fn = `return function(${banList.join(',')}){return ${fn}}`;
+    return new Function('', _fn).apply({}, banList)();
 };
