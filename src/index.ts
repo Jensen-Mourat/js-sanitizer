@@ -1,2 +1,2 @@
-export {sanitizer} from './sanitizer';
+export {sanitize} from './sanitize';
 
