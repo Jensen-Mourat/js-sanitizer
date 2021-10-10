@@ -77,7 +77,7 @@ interface SanitizerOptions {
    expandBanList: string[]; 
    /*
       does a console.error instead of throwing the error
-      Note: This doesnt prevent error inside from the sanitized function to be thrown
+      Note: displays error only from preventKeyword or preventString and not from the function being sanitized.
    */
    failSilently: boolean; 
 }

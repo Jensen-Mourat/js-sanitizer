@@ -11,5 +11,6 @@
   "private": false,
   "devDependencies": {
     "typescript": "^4.4.3"
-  }
+  },
+  "keywords": ["sanitizer", "nodejs", "browser", "sanitize", "vanilla", "parser"]
 }
