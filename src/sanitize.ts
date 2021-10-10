@@ -1,12 +1,12 @@
 import {BAN_LIST, KEYWORDS, KeywordType} from './ban-list';
 
 interface SanitizerOptions {
-    allow: string[];
-    sanitizeWindowProperties: boolean;
-    preventKeyWord: KeywordType[];
-    preventString: string[];
-    expandBanList: string[];
-    failSilently: boolean;
+    allow?: string[];
+    sanitizeWindowProperties?: boolean;
+    preventKeyWord?: KeywordType[];
+    preventString?: string[];
+    expandBanList?: string[];
+    failSilently?: boolean;
 }
 
 const banSet = new Set(BAN_LIST);
